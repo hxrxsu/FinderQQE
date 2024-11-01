@@ -1,0 +1,32 @@
+﻿<Window x:Class="Finder.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Finder"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="347*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="667*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox x:Name="LB_Items" Grid.Column="1" Grid.RowSpan="2">
+            <ListBoxItem x:Name="LI_CryoEye" Content="Cryo eye"/>
+            <ListBoxItem x:Name="LI_PyroEye" Content="Pyro eye"/>
+            <ListBoxItem x:Name="LI_ElectroEye" Content="Electro eye"/>
+        </ListBox>
+        <Image x:Name="IMG_Background" Source="shenhe.png"/>
+        <Image x:Name="IMG_Cryo" Source="cryo.png" HorizontalAlignment="Left" Height="18" Margin="432,309,0,0" VerticalAlignment="Top" Width="24" Stretch="Fill"/>
+        <Button x:Name="BN_CryoElement" Opacity="0" HorizontalAlignment="Left" Margin="432,310,0,0" VerticalAlignment="Top" Height="17" Width="21" Click="BN_CryoElement_Click"/>
+
+        <Image x:Name="IMG_Pyro" Visibility="Hidden" Source="pyro.png" HorizontalAlignment="Left" Height="8" Margin="439,77,0,0" VerticalAlignment="Top" Width="10" Stretch="Fill"/>
+        <Button x:Name="BN_PyroElement" Visibility="Hidden" Opacity="0" HorizontalAlignment="Left" Margin="439,77,0,0" VerticalAlignment="Top" Height="8" Width="10" Click="BN_PyroElement_Click"/>
+
+        <Image x:Name="IMG_Electro" Visibility="Hidden" Source="electro.png" HorizontalAlignment="Left" Height="8" Margin="362,174,0,0" VerticalAlignment="Top" Width="10" RenderTransformOrigin="2.167,3.38" Stretch="Fill"/>
+        <Button x:Name="BN_ElectroElement" Visibility="Hidden" Opacity="0" HorizontalAlignment="Left" Margin="362,174,0,0" VerticalAlignment="Top" Height="8" Width="10" Click="BN_ElectroElement_Click"/>
+    </Grid>
+</Window>
